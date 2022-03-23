@@ -50,17 +50,15 @@ function Horoscope() {
     return (
         <div className="Horoscope">
             <header className="Horoscope-header">
-                <h1>Yo yo yo Horoscope is here</h1>
+                <h1>Get Your Horoscope!</h1>
             </header>
             <TextBox label={"Sun Sign:  "} change={setSun}/>
             <TextBox label={"Moon Sign:  "} change={setMoon}/>
             <TextBox label={"Rising Sign:  "} change={setRising}/>
 
-            <AwesomeButton onPress={Horoscope}>Get Horoscope</AwesomeButton>
+            <AwesomeButton onPress={requestHoroscope}>Get Horoscope</AwesomeButton>
 
             {horoscope.map((s: String) => (<p>{s}</p>))}
-
-
         </div>
 
     );
